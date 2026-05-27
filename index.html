@@ -1,162 +1,626 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bastelanleitung: Ava – Die Spar-Piñata</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #333333;
-            background-color: #fcf8f2; /* Das originale Cremeweiß/Beige aus dem Buch */
-            line-height: 1.6;
-            margin: 0;
-            padding: 60px 20px;
-        }
-        .book-page {
-            max-width: 900px;
-            margin: 0 auto 80px auto; /* Viel Abstand zwischen den Phasen */
-            background: #fcf8f2;
-            padding: 20px;
-        }
-        .row {
-            display: flex;
-            align-items: center; /* Zentriert die Bilder vertikal zum Text */
-            gap: 60px; /* Großzügiger Raum zwischen Bild und Text */
-            margin-bottom: 80px;
-        }
-        .col-image {
-            flex: 0 0 45%;
-            max-width: 45%;
-        }
-        .col-text {
-            flex: 1;
-            padding-top: 10px;
-        }
-        /* Definierter Stil für die echten, hochauflösenden PNG-Bilder */
-        .illustration-image {
-            width: 100%;
-            height: auto;
-            background-color: #fcf8f2; /* Gleicher Hintergrund */
-            display: block;
-            border: none; /* Keine Linien */
-        }
-        h1 {
-            font-size: 26px;
-            color: #2c3e50; /* Das dezente Dunkelblau/Anthrazit aus dem Buch */
-            font-weight: normal;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        .subtitle {
-            font-size: 16px;
-            color: #7f8c8d;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        h2 {
-            font-size: 18px;
-            color: #2c3e50;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        p {
-            margin-bottom: 18px;
-            font-size: 15px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 18px;
-        }
-        li {
-            margin-bottom: 8px;
-            font-size: 15px;
-        }
-        .kasimir-note {
-            font-style: italic;
-            color: #555555;
-            margin-top: 25px;
-            padding-left: 15px;
-            border-left: 2px solid #8e9775; /* Sanftes Olivgrün */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ava selber machen — Bastelanleitung</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --creme: #f4f0eb;
+        --sand: #dccdc2;
+        --sand-hell: #ebe3da;
+        --basis: #6c5b51;
+        --dunkel: #4a3e37;
+        --gold: #b89968;
+        --box-tipp: #5B7D6E;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Jost', sans-serif;
+        font-weight: 300;
+        color: var(--dunkel);
+        background-color: var(--creme);
+        line-height: 1.7;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+    .page { max-width: 820px; margin: 0 auto; padding: 80px 40px; }
+    header.book-header {
+        text-align: center;
+        margin-bottom: 80px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--sand);
+    }
+    .label {
+        font-family: 'Jost', sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 54px;
+        font-weight: 500;
+        margin: 0 0 8px 0;
+        color: var(--dunkel);
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+    }
+    .subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 22px;
+        color: var(--basis);
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    .meta { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 30px; }
+    .meta-item { text-align: center; }
+    .meta-item .label-small {
+        display: block;
+        font-family: 'Jost', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 10px;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    .meta-item .value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        color: var(--dunkel);
+        font-weight: 500;
+    }
+    h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 90px;
+        margin-bottom: 30px;
+        color: var(--dunkel);
+        letter-spacing: -0.3px;
+    }
+    h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 1px;
+        background: var(--gold);
+        margin-top: 12px;
+    }
+    h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: var(--dunkel);
+    }
+    p { margin: 0 0 18px 0; }
+    ul { padding-left: 22px; margin: 0 0 18px 0; }
+    li { margin-bottom: 10px; }
+    .material-hero {
+        display: block;
+        width: 100%;
+        max-width: 580px;
+        height: auto;
+        margin: 0 auto 50px auto;
+    }
+    .shopping-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 35px;
+        margin-bottom: 30px;
+        background: var(--sand-hell);
+        padding: 35px;
+        border-radius: 3px;
+    }
+    .shopping-grid h3 {
+        margin-top: 0;
+        font-family: 'Jost', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--gold);
+        border-bottom: 1px solid var(--sand);
+        padding-bottom: 8px;
+        margin-bottom: 14px;
+    }
+    .shopping-grid ul { padding-left: 18px; list-style: none; }
+    .shopping-grid ul li { position: relative; padding-left: 14px; margin-bottom: 8px; }
+    .shopping-grid ul li::before {
+        content: '·';
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-weight: bold;
+    }
+    .tipp-box {
+        background: var(--box-tipp);
+        color: var(--creme);
+        padding: 22px 28px;
+        border-radius: 3px;
+        margin: 20px 0;
+        position: relative;
+        padding-left: 60px;
+        font-family: 'Jost', sans-serif;
+        font-size: 15px;
+    }
+    .tipp-box::before {
+        content: '🐾';
+        position: absolute;
+        left: 22px;
+        top: 22px;
+        font-size: 20px;
+    }
+    .tipp-box .tipp-label {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 4px;
+        color: var(--creme);
+    }
+    .row { display: flex; align-items: flex-start; gap: 50px; margin-bottom: 60px; }
+    .row.reverse { flex-direction: row-reverse; }
+    .col-image { flex: 0 0 44%; max-width: 44%; }
+    .col-text { flex: 1; padding-top: 5px; }
+    .illustration {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        background-color: var(--sand-hell);
+        border-radius: 2px;
+    }
+    .step-title { display: flex; align-items: baseline; gap: 16px; margin-bottom: 14px; margin-top: 0; }
+    .step-number {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 42px;
+        font-weight: 400;
+        color: var(--gold);
+        font-style: italic;
+        line-height: 1;
+    }
+    .step-headline {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--dunkel);
+        line-height: 1.2;
+    }
+    .day-divider { margin: 100px 0 50px 0; text-align: center; position: relative; }
+    .day-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--sand);
+    }
+    .day-divider span {
+        background: var(--creme);
+        padding: 0 30px;
+        position: relative;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 24px;
+        color: var(--basis);
+        font-weight: 400;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0 30px 0; font-size: 15px; }
+    th, td { text-align: left; padding: 14px 18px; }
+    th {
+        background: var(--sand);
+        font-family: 'Jost', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: var(--dunkel);
+    }
+    td { border-bottom: 1px solid var(--sand); }
+    td:first-child {
+        font-weight: 500;
+        color: var(--basis);
+        width: 28%;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+    }
+    .troubleshoot { display: grid; grid-template-columns: 1fr 1fr; gap: 25px 45px; margin-top: 30px; }
+    .troubleshoot dt {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 19px;
+        margin-bottom: 6px;
+        color: var(--basis);
+    }
+    .troubleshoot dd { margin: 0 0 22px 0; color: var(--dunkel); font-size: 15px; }
+    footer {
+        margin-top: 120px;
+        padding-top: 50px;
+        border-top: 1px solid var(--sand);
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--basis);
+        font-size: 16px;
+    }
+    footer p { margin: 6px 0; }
+    footer .wg {
+        font-family: 'Jost', sans-serif;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 11px;
+        color: var(--gold);
+        margin-top: 18px;
+    }
+    @media print {
+        body { padding: 20px; font-size: 11pt; background: white; }
+        .page { padding: 0; max-width: none; }
+        h2 { page-break-before: always; }
+        .row { page-break-inside: avoid; }
+        .day-divider span { background: white; }
+    }
+    @media (max-width: 700px) {
+        .page { padding: 50px 22px; }
+        h1 { font-size: 38px; }
+        .subtitle { font-size: 18px; }
+        h2 { font-size: 28px; margin-top: 70px; }
+        .row, .row.reverse { flex-direction: column; gap: 22px; margin-bottom: 50px; }
+        .col-image, .col-text { flex: 1; max-width: 100%; }
+        .troubleshoot { grid-template-columns: 1fr; }
+        .meta { gap: 30px; }
+        .step-number { font-size: 36px; }
+        .step-headline { font-size: 20px; }
+        .shopping-grid { padding: 25px; }
+    }
+</style>
 </head>
 <body>
+<div class="page">
 
-<div class="book-page">
-    <h1>Die absurde Avocado</h1>
-    <div class="subtitle">Ergänzung: Bastelanleitung Ava</div>
-
-    <div class="row">
-        <div class="col-image">
-            <img src="https://via.placeholder.com/600x450/fcf8f2/2c3e50?text=Bild:+Detaillierte+Struktur+des+gekleisterten+Ballons+und+Schokolabrador+Kasimir,+der+aufmerksam+zusieht" alt="Plastische Detailaufnahme des gekleisterten Ballons mit Kasimir, der zusieht" class="illustration-image">
+<header class="book-header">
+    <p class="label">Ganz normales Alltagswissen — Finanzen</p>
+    <h1>Ava selber machen</h1>
+    <p class="subtitle">Die Spar-Piñata aus dem Buch</p>
+    <div class="meta">
+        <div class="meta-item">
+            <span class="label-small">Schwierigkeit</span>
+            <span class="value">Mittel</span>
         </div>
-        <div class="col-text">
-            <h2>Phase 1 &amp; 2: Vorbereitung &amp; Kern</h2>
-            <p>Der Kern sorgt für die plastische 3D-Optik und dient später als eigentlicher Behälter für das Kleingeld.</p>
-            <ul>
-                <li>Kleinen Luftballon auf die gewünschte Bauchgröße aufblasen und aufhängen.</li>
-                <li>Die vordere Hälfte dünn mit Kleister bestreichen und mit Zeitungsstreifen überziehen.</li>
-                <li><strong>Wichtig:</strong> Die Streifen etwa 2–3 cm über den Äquator des Ballons hinausstehen lassen. Dieser trockene Überstand wird später die Klebelasche.</li>
-                <li>Nach der zweiten Lage alles durchtrocknen lassen, den Ballon piksen und entfernen.</li>
-            </ul>
-            <p class="kasimir-note">Kasimir sitzt aufmerksam daneben. Seine Ohren sind leicht angehoben – er beobachtet fasziniert, wie aus der Zeitung langsam eine plastische Form entsteht.</p>
+        <div class="meta-item">
+            <span class="label-small">Dauer</span>
+            <span class="value">3 Tage</span>
+        </div>
+        <div class="meta-item">
+            <span class="label-small">Arbeitszeit</span>
+            <span class="value">3–4 Stunden</span>
         </div>
     </div>
+</header>
 
-    <div class="row">
-        <div class="col-image">
-            <img src="https://via.placeholder.com/600x450/fcf8f2/2c3e50?text=Bild:+Detaillierte+Aufhängungssicherung+am+Karton,+Kasimirs+Kopf+folgt+der+Kordel" alt="Detaillierte Ansicht der Rückwandsicherung mit Kordelzug und Kasimirs aufmerksamem Blick" class="illustration-image">
-        </div>
-        <div class="col-text">
-            <h2>Phase 3: Rückwand &amp; Lasten-Sicherung</h2>
-            <p>Weil Münzen verdammt schwer werden, darf die Aufhängung niemals am weichen Papier hängen. Sie muss direkt den Karton kontern.</p>
-            <ul>
-                <li>Die typische Avocado-Silhouette auf den stabilen Wellkarton zeichnen und ausschneiden.</li>
-                <li>Am oberen, schmalen Ende zwei Löcher durch die Pappe stechen.</li>
-                <li>Die dicke Kordel von vorne nach hinten durchziehen. Auf der Rückseite ein kleines Reststück Karton zwischenlegen und die Schnur darüber extrem fest verknoten. Das verhindert das Ausreißen.</li>
-            </ul>
-            <p class="kasimir-note">Kasimir folgt den plastischen Bewegungen der Schnur mit dem Kopf. Er hebt die Rute – das sieht schon sehr stabil aus.</p>
-        </div>
+<h2>Was du brauchst</h2>
+<img src="bilder/ava_00_material.PNG" alt="Material-Übersicht: Was du brauchst" class="material-hero">
+<div class="shopping-grid">
+    <div>
+        <h3>Ballons</h3>
+        <ul>
+            <li>1 grosser runder Ballon (ca. 90 cm Umfang)</li>
+            <li>1 mittlerer Ballon (ca. 30 cm)</li>
+            <li>1 kleiner Ballon (ca. 20 cm)</li>
+        </ul>
     </div>
-
-    <div class="row">
-        <div class="col-image">
-            <img src="https://via.placeholder.com/600x450/fcf8f2/2c3e50?text=Bild:+Plastische+Heißkleber-Nacht,+Rauchsäule+über+der+Heißklebepistole,+Kasimir+neugierig+neben+dem+Schlitz" alt="Realistische Nahaufnahme der Fixierung des Zeitungskerns auf der Pappe mit Heißkleber und rauchender Pistole, Kasimir sieht neugierig zu" class="illustration-image">
-        </div>
-        <div class="col-text">
-            <h2>Phase 4: Die Hochzeit &amp; Befüllschlitz</h2>
-            <p>Jetzt bringen wir die Teile zusammen. Der überstehende Rand wird nun flachgelegt.</p>
-            <ul>
-                <li>Den Zeitungskern mittig auf die Karton-Vorderseite setzen.</li>
-                <li>Den überstehenden Rand rundherum flach auf den Karton drücken.</li>
-                <li>Mit reichlich Heißkleber die Lasche lückenlos auf der Pappe fixieren. Erst dadurch wird die Konstruktion plastisch und fest.</li>
-                <li>Oben in den Zeitungskern mit dem Cutter einen ca. 4 cm langen Einwurfschlitz für die Münzen schneiden.</li>
-            </ul>
-            <p class="kasimir-note">Kasimir rückt näher heran. Das plastische Klacken der Heißklebepistole interessiert ihn ungemein. Er schaut hoch, als würde er den Fortschritt anerkennen.</p>
-        </div>
+    <div>
+        <h3>Papier</h3>
+        <ul>
+            <li>Alte Zeitungen (ca. 1 Wochenausgabe)</li>
+            <li>Krepppapier hellgrün (ca. 2 Rollen)</li>
+            <li>Krepppapier dunkelgrün (ca. 2 Rollen)</li>
+            <li>Krepppapier braun (1 kleines Stück)</li>
+        </ul>
     </div>
-
-    <div class="row">
-        <div class="col-image">
-            <img src="https://via.placeholder.com/600x450/fcf8f2/2c3e50?text=Bild:+Fertige,+detaillierte+Grünfransen-Avocado-Piñata+und+Kasimir+glücklich+wedelnd" alt="Realistische Ansicht der fertigen, detailreich gefransten Avocado-Piñata 'Ava' in plastischem Grün, Kasimir wedelt davor" class="illustration-image">
-        </div>
-        <div class="col-text">
-            <h2>Phase 5: Das optische Finish</h2>
-            <p>Erst die Fransen machen die Avocado zu Ava. Hier kommt endlich die Farbe ins Spiel.</p>
-            <ul>
-                <li>Grünes Krepppapier in ca. 5 cm breite Streifen schneiden und bis zur Hälfte feine Fransen einzwicken.</li>
-                <li>Die Streifen mit Bastelkleber <strong>zwingend von unten nach oben</strong> überlappend aufkleben. Nur so hängen die Fransen sauber über den Kanten.</li>
-                <li>Außen das dunklere Grün verwenden, zum Bauch hin das hellere Grün.</li>
-                <li>Die halbierte braune Kugel als Avocadokern genau in die Mitte kleben. Den Einwurfschlitz oben dabei nicht verdecken!</li>
-            </ul>
-            <p class="kasimir-note">Die Piñata hängt. Kasimir steht davor, schaut glücklich nach oben und wedelt entspannt mit der Rute. Er sieht sichtlich zufrieden aus mit dem fertigen Prachtexemplar.</p>
-        </div>
+    <div>
+        <h3>Klebstoff</h3>
+        <ul>
+            <li>Tapetenkleister oder Mehl-Wasser-Pampe</li>
+            <li>Weissleim (Bastelleim)</li>
+            <li>Heissleimpistole</li>
+            <li>Malerkrepp</li>
+        </ul>
     </div>
-
+    <div>
+        <h3>Werkzeug</h3>
+        <ul>
+            <li>Wellpappe (ca. 50 × 50 cm)</li>
+            <li>Schere</li>
+            <li>Cutter</li>
+            <li>Pinsel</li>
+            <li>Naturkordel (ca. 1 m)</li>
+        </ul>
+    </div>
 </div>
 
+<div class="tipp-box">
+    <span class="tipp-label">Tipp von DudeWithDog</span>
+    Im Fachhandel gibt es alles. Wer grösser bauen will, braucht entsprechend mehr Material. Birnenballons gibts auch in grösseren Versionen.
+</div>
+
+<div class="day-divider"><span>Tag eins — Rohbau</span></div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_01_kleister.PNG" alt="Kleister anrühren" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">1</span><span class="step-headline">Kleister anrühren</span></div>
+        <p>Mehl und Wasser im Verhältnis eins zu eins verrühren, bis eine glatte Pampe entsteht. Oder Tapetenkleister nach Packungsanleitung ansetzen. Beides funktioniert.</p>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_02_ballons.PNG" alt="Ballons vorbereiten" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">2</span><span class="step-headline">Ballons vorbereiten</span></div>
+        <ul>
+            <li>Grossen und mittleren Ballon aufblasen</li>
+            <li>Mit Malerkrepp an den Knoten zusammenkleben, grosser Ballon unten, mittlerer oben</li>
+            <li>So entsteht die typische Avocado-Birnenform mit Spitze</li>
+            <li>An einer Schnur aufhängen</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_03_zeitung.PNG" alt="Erste Lage Zeitung" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">3</span><span class="step-headline">Erste Lage Zeitung</span></div>
+        <ul>
+            <li>Zeitung in Streifen reissen (ca. 3 bis 5 cm breit, 10 bis 15 cm lang)</li>
+            <li>Streifen in Kleister tunken, überschüssigen Kleister abstreifen</li>
+            <li>Auf die <em>Rückseite</em> der Ballons kleben, nur die obere Hälfte</li>
+            <li>Übergang zwischen den zwei Ballons besonders sorgfältig: Streifen quer drüberlegen</li>
+            <li>Vollständig trocknen lassen, ca. 4 bis 6 Stunden</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_04_kern_ueberstand.PNG" alt="Kern vorbereiten mit Überstand" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">4</span><span class="step-headline">Kern vorbereiten</span></div>
+        <ul>
+            <li>Kleinen Ballon aufblasen, an Schnur aufhängen</li>
+            <li>Eine Hälfte mit Zeitungsstreifen und Kleister überziehen</li>
+            <li>Wichtig: Die Streifen sollen etwa 2 bis 3 cm über den Äquator des Ballons hinausreichen. Dieser Überstand wird später zur Klebelasche</li>
+            <li>Trocknen lassen</li>
+        </ul>
+    </div>
+</div>
+
+<div class="day-divider"><span>Tag zwei — Aufbau</span></div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_05_lagen.PNG" alt="Zweite und dritte Lage" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">5</span><span class="step-headline">Zweite und dritte Lage</span></div>
+        <ul>
+            <li>Auf den Avocado-Rücken nochmal Zeitungsstreifen kleben, diesmal in andere Richtung als beim ersten Mal</li>
+            <li>Trocknen lassen, 4 bis 6 Stunden</li>
+            <li>Dritte Lage drauf, nochmal trocknen lassen</li>
+        </ul>
+        <p>Hier entscheidet sich, wie schnell Ava reisst:</p>
+        <table>
+            <thead><tr><th>Lagen</th><th>Wann gibt Ava nach?</th></tr></thead>
+            <tbody>
+                <tr><td>2 Lagen</td><td>Früh, schon bei wenig Belastung oder Luftfeuchtigkeit</td></tr>
+                <tr><td>3 Lagen</td><td>Mittel, bewährter Standard</td></tr>
+                <tr><td>4 Lagen</td><td>Spät, nur bei gezielter Belastung</td></tr>
+                <tr><td>5+ Lagen</td><td>Sehr spät, fast unzerstörbar</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_06_kern_fertig.PNG" alt="Kern fertigstellen" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">6</span><span class="step-headline">Kern fertigstellen</span></div>
+        <ul>
+            <li>Kleinen Ballon mit zweiter Lage überziehen, auch hier den Überstand mitführen</li>
+            <li>Trocknen lassen</li>
+        </ul>
+        <div class="tipp-box">
+            <span class="tipp-label">Tipp von DudeWithDog</span>
+            Zwei Lagen reichen beim Kern. Er muss nicht reissen, sondern nur halten.
+        </div>
+    </div>
+</div>
+
+<div class="day-divider"><span>Tag drei — Zusammenbau</span></div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_07_ballons_raus.PNG" alt="Ballons entfernen" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">7</span><span class="step-headline">Ballons entfernen</span></div>
+        <ul>
+            <li>Ballons in den Pappmaché-Schalen platzen lassen, mit einer Nadel</li>
+            <li>Reste rausziehen</li>
+            <li>Du hast jetzt: eine grosse gewölbte Avocado-Halbschale (Rücken) und eine kleinere Halbkugel (Kern)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_08_karton_zuschneiden.PNG" alt="Vorderseite zuschneiden" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">8</span><span class="step-headline">Vorderseite zuschneiden</span></div>
+        <ul>
+            <li>Halbschale flach auf den Karton legen, Umriss mit Bleistift nachzeichnen</li>
+            <li>Karton in Avocado-Form ausschneiden, etwa 5 mm grösser als die Halbschale, damit ein kleiner Rand übersteht zum Ankleben</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_09_schlitz.PNG" alt="Schlitz schneiden" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">9</span><span class="step-headline">Schlitz schneiden</span></div>
+        <ul>
+            <li>Oben in den Karton einen schmalen Schlitz schneiden, ca. 4 cm lang, 1 cm breit</li>
+            <li>Hier kommt später das Sparen rein</li>
+        </ul>
+        <div class="tipp-box">
+            <span class="tipp-label">Tipp von DudeWithDog</span>
+            Kein Deckel, keine Klappe. Das würde die Konstruktion schwächen.
+        </div>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_10_schnur.PNG" alt="Schnur befestigen" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">10</span><span class="step-headline">Schnur für die Aufhängung</span></div>
+        <ul>
+            <li>Zwei kleine Löcher links und rechts oben in den Karton stechen</li>
+            <li>Auf der Rückseite ein kleines Reststück Wellkarton als Konterstück über die beiden Löcher legen</li>
+            <li>Schnur von vorne durch beide Löcher und durch das Konterstück ziehen</li>
+            <li>Auf dem Konterstück fest verknoten, das verteilt den Zug auf eine grössere Fläche und verhindert, dass die Schnur ausreisst</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_11_kern_aufkleben.PNG" alt="Kern aufkleben" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">11</span><span class="step-headline">Kern aufkleben</span></div>
+        <ul>
+            <li>Den Kern (Halbkugel mit überstehendem Rand) mittig auf den Karton legen</li>
+            <li>Den überstehenden Rand flach auf den Karton drücken, das ist die Klebefläche</li>
+            <li>Mit Heissleim rundum am Karton fixieren</li>
+        </ul>
+        <div class="tipp-box">
+            <span class="tipp-label">Tipp von DudeWithDog</span>
+            So sitzt der Kern stabil und plastisch auf der Vorderseite.
+        </div>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_12_zusammenfuegen.PNG" alt="Vorderseite und Rücken zusammenfügen" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">12</span><span class="step-headline">Vorderseite und Rücken zusammenfügen</span></div>
+        <ul>
+            <li>Den überstehenden Kartonrand mit Heissleim am Rand der Pappmaché-Schale befestigen</li>
+            <li>Rundum verbinden, sodass ein geschlossener Hohlkörper entsteht</li>
+            <li>Schlitz oben bleibt offen, das ist die einzige Öffnung</li>
+        </ul>
+    </div>
+</div>
+
+<div class="day-divider"><span>Die Avocado-Haut</span></div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_13_fransen_schneiden.PNG" alt="Fransen schneiden" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">13</span><span class="step-headline">Fransen schneiden</span></div>
+        <ul>
+            <li>Alle drei Farben (hellgrün, dunkelgrün, braun) in breite Streifen schneiden, ca. 8 bis 10 cm breit</li>
+            <li>Eine Seite der Streifen tief einfransen, kleine Schnitte alle 5 mm, ca. 4 cm tief. Die Fransen sollen mindestens zur Hälfte der Streifenbreite reichen</li>
+        </ul>
+        <div class="tipp-box">
+            <span class="tipp-label">Tipp von DudeWithDog</span>
+            Mehrere Bögen übereinander legen und auf einmal schneiden. Das spart Zeit.
+        </div>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_14_rand_dunkelgruen.PNG" alt="Dunkelgrüner Rand" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">14</span><span class="step-headline">Dunkelgrüner Rand</span></div>
+        <ul>
+            <li>Unten am Rand der Vorderseite anfangen</li>
+            <li>Waagrechte Bahnen dunkelgrüner Fransen aufkleben (Weissleim), Fransen zeigen nach unten</li>
+            <li>Den ganzen äusseren Rand der Vorderseite (ca. 3 bis 4 cm breit) komplett mit Dunkelgrün füllen</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_15_fruchtfleisch_hellgruen.PNG" alt="Hellgrünes Fruchtfleisch" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">15</span><span class="step-headline">Hellgrünes Fruchtfleisch</span></div>
+        <ul>
+            <li>Im inneren Bereich der Vorderseite weitermachen, Bahn für Bahn waagrecht nach oben</li>
+            <li>Bis kurz vor den Kern in der Mitte</li>
+            <li>Den Kern selbst freilassen</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_16_kern_braun.PNG" alt="Brauner Kern" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">16</span><span class="step-headline">Brauner Kern</span></div>
+        <ul>
+            <li>Den Kern mit braunen Fransen verkleiden</li>
+            <li>Hier ruhig dichter und kürzer fransen, damit die rundliche Form schön sichtbar bleibt</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-image"><img src="bilder/ava_17_rueckseite.PNG" alt="Rückseite verkleiden" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">17</span><span class="step-headline">Rückseite</span></div>
+        <ul>
+            <li>Avocado wenden</li>
+            <li>Den ganzen Rücken mit dunkelgrünen Fransen verkleiden, Bahn für Bahn waagrecht von unten nach oben</li>
+        </ul>
+        <div class="tipp-box">
+            <span class="tipp-label">Tipp von DudeWithDog</span>
+            Hier nicht sparen mit den Fransen. Das gibt das satte Avocado-Aussehen.
+        </div>
+    </div>
+</div>
+
+<div class="row reverse">
+    <div class="col-image"><img src="bilder/ava_18_finale.PNG" alt="Ava fertig, Finale" class="illustration"></div>
+    <div class="col-text">
+        <div class="step-title"><span class="step-number">18</span><span class="step-headline">Aufhängen und warten</span></div>
+        <ul>
+            <li>An einem gut sichtbaren Ort aufhängen, die Küche ist Tradition</li>
+            <li>Den Schlitz nutzen, wofür du willst</li>
+            <li>Warten, was die Zeit und die Luftfeuchtigkeit mit Ava machen</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Wenn etwas nicht klappt</h2>
+<dl class="troubleshoot">
+    <div><dt>Die Pampe ist zu flüssig</dt><dd>Mehr Mehl rein, kurz aufkochen, abkühlen lassen.</dd></div>
+    <div><dt>Das Pappmaché klebt nicht an der Vorderseite</dt><dd>Heissleim verwenden. Weissleim braucht zu lange.</dd></div>
+    <div><dt>Die Form ist schief</dt><dd>Beim Aufhängen einen zweiten Punkt zum Stabilisieren nehmen, z.B. an der Spitze festbinden.</dd></div>
+    <div><dt>Die Fransen lösen sich</dt><dd>Weissleim mit etwas Wasser verdünnen, gleichmässig auftragen. Mehr Druck beim Andrücken.</dd></div>
+    <div><dt>Ava ist zu schwer geworden</dt><dd>Beim nächsten Mal weniger Lagen. Diese hier hängt jetzt extra stabil.</dd></div>
+    <div><dt>Der Kern fällt ab</dt><dd>Überstand prüfen. Wenn die Klebelasche zu kurz war, neuen Heissleim grossflächig auftragen.</dd></div>
+</dl>
+
+<footer>
+    <p>Bastelanleitung Ava</p>
+    <p>Ergänzung zu «Ganz normales Alltagswissen — Finanzen»</p>
+    <p class="wg">WG-Edition · DudeWithDog</p>
+</footer>
+
+</div>
 </body>
 </html>
