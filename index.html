@@ -1,0 +1,200 @@
+Hier ist die Sache: Ich hatte mich da vorhin komplett verzettelt und versucht, die Grafik und den Text in einem Rutsch zu generieren, was im System blockiert hat. Das war mein Fehler, danke für deine Geduld.
+Lassen wir das Frickeln und die Missverständnisse hinter uns. Wir nehmen jetzt genau die cremefarbene, ruhige Farbwelt des Buches, geben jedem Schritt extrem viel Raum (kein Platzsparen!) und platzieren die Bilder links und den Text rechts.
+Hier ist der fertige, saubere HTML-Code für deine Ergänzungsseite. Du kannst ihn einfach kopieren, als .html speichern und direkt in Canva oder deinem Browser öffnen.
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastelanleitung: Ava – Die Spar-Piñata</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333333;
+            background-color: #fcf8f2; /* Das originale Cremeweiß/Beige aus dem Buch */
+            line-height: 1.6;
+            margin: 0;
+            padding: 60px 20px;
+        }
+        .book-page {
+            max-width: 900px;
+            margin: 0 auto 80px auto; /* Viel Abstand zwischen den Phasen */
+            background: #fcf8f2;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px; /* Großzügiger Raum zwischen Bild und Text */
+            margin-bottom: 60px;
+        }
+        .col-image {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+        .col-text {
+            flex: 1;
+            padding-top: 10px;
+        }
+        /* SVG-Platzhalter im Stil des Buches: Schwarz-Weiß-Strichzeichnung, olivgrüne Avocado */
+        .illustration-box {
+            width: 100%;
+            background-color: #f7f1e8;
+            border: 1px solid #e3dac9;
+            border-radius: 4px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 26px;
+            color: #2c3e50; /* Das dezente Dunkelblau/Anthrazit aus dem Buch */
+            font-weight: normal;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 18px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .kasimir-note {
+            font-style: italic;
+            color: #555555;
+            margin-top: 25px;
+            padding-left: 15px;
+            border-left: 2px solid #8e9775; /* Sanftes Olivgrün */
+        }
+    </style>
+</head>
+<body>
+
+<div class="book-page">
+    <h1>Die absurde Avocado</h1>
+    <div class="subtitle">Ergänzung: Bastelanleitung Ava</div>
+
+    <div class="row">
+        <div class="col-image">
+            <svg class="illustration-box" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#f7f1e8"/>
+                <path d="M 200,80 C 140,80 130,170 160,220 C 180,250 220,250 240,220 C 270,170 260,80 200,80 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                <path d="M 145,170 C 130,170 125,200 150,230" fill="none" stroke="#8e9775" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <path d="M 255,170 C 270,170 275,200 250,230" fill="none" stroke="#8e9775" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <path d="M 310,280 C 310,240 330,220 350,220 C 370,220 380,240 380,280" fill="none" stroke="#333" stroke-width="2"/>
+                <circle cx="340" cy="205" r="12" fill="none" stroke="#333" stroke-width="2"/> <path d="M 330,205 C 325,215 325,230 332,235" fill="none" stroke="#333" stroke-width="1.5"/> <circle cx="344" cy="202" r="1.5" fill="#333"/> </svg>
+        </div>
+        <div class="col-text">
+            <h2>Phase 1 &amp; 2: Vorbereitung &amp; Kern</h2>
+            <p>Der Kern sorgt für die plastische 3D-Optik und dient später als eigentlicher Behälter für das Kleingeld.</p>
+            <ul>
+                <li>Kleinen Luftballon auf die gewünschte Bauchgröße aufblasen und aufhängen.</li>
+                <li>Die vordere Hälfte dünn mit Kleister bestreichen und mit Zeitungsstreifen überziehen.</li>
+                <li><strong>Wichtig:</strong> Die Streifen etwa 2–3 cm über den Äquator des Ballons hinausstehen lassen. Dieser trockene Überstand wird später die Klebelasche.</li>
+                <li>Nach der zweiten Lage alles durchtrocknen lassen, den Ballon piksen und entfernen.</li>
+            </ul>
+            <p class="kasimir-note">Kasimir sitzt aufmerksam daneben. Seine Ohren sind leicht angehoben – er beobachtet fasziniert, wie aus der Zeitung langsam eine Form entsteht.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-image">
+            <svg class="illustration-box" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#f7f1e8"/>
+                <path d="M 200,50 C 160,50 150,120 130,180 C 110,240 140,270 200,270 C 260,270 290,240 270,180 C 250,120 240,50 200,50 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                <circle cx="190" cy="80" r="3" fill="#333"/>
+                <circle cx="210" cy="80" r="3" fill="#333"/>
+                <path d="M 190,80 L 190,30 M 210,80 L 210,30" fill="none" stroke="#333" stroke-width="1.5"/>
+                <rect x="180" y="90" width="40" height="30" fill="none" stroke="#333" stroke-width="1"/>
+                <circle cx="70" cy="240" r="12" fill="none" stroke="#333" stroke-width="2"/>
+                <path d="M 60,240 C 55,250 55,265 62,270" fill="none" stroke="#333" stroke-width="1.5"/>
+                <circle cx="74" cy="238" r="1.5" fill="#333"/>
+            </svg>
+        </div>
+        <div class="col-text">
+            <h2>Phase 3: Rückwand &amp; Lasten-Sicherung</h2>
+            <p>Weil Münzen verdammt schwer werden, darf die Aufhängung niemals am weichen Papier hängen. Sie muss direkt den Karton kontern.</p>
+            <ul>
+                <li>Die typische Avocado-Silhouette auf den stabilen Wellkarton zeichnen und ausschneiden.</li>
+                <li>Am oberen, schmalen Ende zwei Löcher durch die Pappe stechen.</li>
+                <li>Die dicke Kordel von vorne nach hinten durchziehen. Auf der Rückseite ein kleines Reststück Karton zwischenlegen und die Schnur darüber extrem fest verknoten. Das verhindert das Ausreißen.</li>
+            </ul>
+            <p class="kasimir-note">Kasimir folgt den Bewegungen der Schnur mit dem Kopf. Er hebt die Rute – das sieht schon sehr stabil aus.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-image">
+            <svg class="illustration-box" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#f7f1e8"/>
+                <path d="M 200,50 C 160,50 150,120 130,180 C 110,240 140,270 200,270 C 260,270 290,240 270,180 C 250,120 240,50 200,50 Z" fill="none" stroke="#333" stroke-width="1"/>
+                <path d="M 200,120 C 160,120 155,180 170,210 C 180,230 220,230 230,210 C 245,180 240,120 200,120 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                <path d="M 130,130 L 150,140 L 145,150 L 125,140 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                <line x1="190" y1="135" x2="210" y2="135" stroke="#333" stroke-width="2"/>
+            </svg>
+        </div>
+        <div class="col-text">
+            <h2>Phase 4: Die Hochzeit &amp; Befüllschlitz</h2>
+            <p>Jetzt bringen wir die Teile zusammen. Der überstehende Rand wird nun flachgelegt.</p>
+            <ul>
+                <li>Den Zeitungskern mittig auf die Karton-Vorderseite setzen.</li>
+                <li>Den überstehenden Rand rundherum flach auf den Karton drücken.</li>
+                <li>Mit reichlich Heißkleber die Lasche lückenlos auf der Pappe fixieren. Erst dadurch wird die Konstruktion plastisch und fest.</li>
+                <li>Oben in den Zeitungskern mit dem Cutter einen ca. 4 cm langen Einwurfschlitz für die Münzen schneiden.</li>
+            </ul>
+            <p class="kasimir-note">Kasimir rückt näher heran. Das rhythmische Klacken der Heißklebepistole interessiert ihn ungemein. Er schaut hoch, als würde er den Fortschritt anerkennen.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-image">
+            <svg class="illustration-box" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#f7f1e8"/>
+                <path d="M 200,50 C 160,50 150,120 130,180 C 110,240 140,270 200,270 C 260,270 290,240 270,180 C 250,120 240,50 200,50 Z" fill="#8e9775" stroke="#333" stroke-width="1.5"/>
+                <path d="M 200,70 C 170,70 160,130 145,180 C 130,230 150,250 200,250 C 250,250 270,230 255,180 C 240,130 230,70 200,70 Z" fill="#b1b899" stroke="none"/>
+                <circle cx="200" cy="180" r="25" fill="#6e473b" stroke="#333" stroke-width="1"/>
+                <path d="M 320,280 C 320,230 340,210 360,210" fill="none" stroke="#333" stroke-width="2"/>
+                <circle cx="350" cy="195" r="12" fill="none" stroke="#333" stroke-width="2"/>
+                <path d="M 345,200 Q 350,205 355,200" fill="none" stroke="#333" stroke-width="1.5"/>
+                <circle cx="354" cy="192" r="1.5" fill="#333"/>
+            </svg>
+        </div>
+        <div class="col-text">
+            <h2>Phase 5: Das optische Finish</h2>
+            <p>Erst die Fransen machen die Avocado zu Ava. Hier kommt endlich die Farbe ins Spiel.</p>
+            <ul>
+                <li>Grünes Krepppapier in ca. 5 cm breite Streifen schneiden und bis zur Hälfte feine Fransen einzwicken.</li>
+                <li>Die Streifen mit Bastelkleber <strong>zwingend von unten nach oben</strong> überlappend aufkleben. Nur so hängen die Fransen sauber über den Kanten.</li>
+                <li>Außen das dunklere Grün verwenden, zum Bauch hin das hellere Grün.</li>
+                <li>Die halbierte braune Kugel als Avocadokern genau in die Mitte kleben. Den Einwurfschlitz oben dabei nicht verdecken!</li>
+            </ul>
+            <p class="kasimir-note">Die Piñata hängt. Kasimir steht davor, schaut glücklich nach oben und wedelt entspannt mit der Rute. Er sieht sichtlich zufrieden aus mit dem fertigen Prachtexemplar.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+```
