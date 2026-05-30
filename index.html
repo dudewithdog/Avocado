@@ -111,6 +111,23 @@
         max-width: 580px;
         height: auto;
         margin: 0 auto 50px auto;
+        transform: rotate(90deg);
+        transform-origin: center center;
+    }
+    .material-hero-wrapper {
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto 50px auto;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .material-hero-wrapper img {
+        width: 133%;
+        height: auto;
+        transform: rotate(90deg);
     }
     .shopping-grid {
         display: grid;
@@ -311,7 +328,9 @@
 </header>
 
 <h2>Was du brauchst</h2>
-<img src="bilder/ava_00_material.PNG" alt="Material-Übersicht: Was du brauchst" class="material-hero">
+<div class="material-hero-wrapper">
+    <img src="bilder/ava_00_material.PNG" alt="Material-Übersicht: Was du brauchst">
+</div>
 <div class="shopping-grid">
     <div>
         <h3>Ballons</h3>
@@ -624,5 +643,3 @@
 </div>
 </body>
 </html>
-
-
